@@ -26,3 +26,17 @@ var poem = (
   </div>
 );
 ReactDOM.render(poem, document.getElementById('third_container'));
+
+var name = 'Ally';
+ReactDOM.render({name}, document.getElementById('name'));
+
+function greeting (name) {
+  alert('Hello, ' + name);
+};
+
+var image = (
+  <img
+    src="http://i1308.photobucket.com/albums/s602/lysautumn/Facebook/Mobile%20Uploads/2016-12/20161216_110149_zps9nqxln2l.jpg"
+    alt="image"
+    onClick={greeting} />
+);
