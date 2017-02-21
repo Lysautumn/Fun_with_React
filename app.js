@@ -30,8 +30,8 @@ ReactDOM.render(poem, document.getElementById('third_container'));
 var name = 'Ally';
 ReactDOM.render({name}, document.getElementById('name'));
 
-function greeting (name) {
-  alert('Hello, ' + name);
+function greeting(name) {
+  alert('Hello, ' + name + '!');
 };
 
 var image = (
