@@ -27,6 +27,7 @@ var poem = (
 );
 ReactDOM.render(poem, document.getElementById('third_container'));
 
+// using curly braces will also bring in variables
 var name = 'Ally';
 ReactDOM.render({name}, document.getElementById('name'));
 
@@ -34,6 +35,7 @@ function greeting(name) {
   alert('Hello, ' + name + '!');
 };
 
+// using images
 var image = (
   <img
     src="http://i1308.photobucket.com/albums/s602/lysautumn/Facebook/Mobile%20Uploads/2016-12/20161216_110149_zps9nqxln2l.jpg"
