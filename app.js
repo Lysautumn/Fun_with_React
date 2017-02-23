@@ -42,3 +42,44 @@ var image = (
     alt="image"
     onClick={greeting} />
 );
+
+// Can't inject if statements in JSX, code will not run:
+// Example: The following code would break:
+// (
+//   <h1>
+//     { if (purchase.complete) 'Thank you for placing an order!' }
+//   </h1>
+// )
+
+// Most common way is to use ternary operators
+function coinToss () {
+  // Randomly return either 'heads' or 'tails'.
+  return Math.random() < 0.5 ? 'heads' : 'tails';
+}
+
+var pics = {
+  kitty: 'https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-kitty.jpg',
+  doggy: 'https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-puppy.jpeg'
+};
+
+// ternary operator is here:
+var img = <img src={pics[coinToss() == 'heads' ? 'kitty' : 'doggy']} />;
+
+ReactDOM.render(
+	img,
+	document.getElementById('coin_toss')
+);
+
+// can also use && operator instead of if statements
+// works best for conditionals that will sometimes do something and sometimes do nothing
+var pirate = Math.random() < 0.5;
+var treasure = (
+  <ul>
+    <li>Apples</li>
+    { !pirate && <li>Gold</li>}
+    <li>Plants</li>
+    <li>Books</li>
+  </ul>
+);
+
+ReactDOM.render(treasure, getElementById('treasureChest'));
