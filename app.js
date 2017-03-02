@@ -83,3 +83,12 @@ var treasure = (
 );
 
 ReactDOM.render(treasure, getElementById('treasureChest'));
+
+// .map will cycle through an array
+var colors = ['Purple', 'Red', 'Blue', 'Brown'];
+
+var colorList = colors.map(function(color) {
+  return <li>{color}</li>;
+});
+
+ReactDOM.render(<ul>{colorList}</ul>, document.getElementById('colors'));
